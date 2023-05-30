@@ -15,4 +15,6 @@ public interface ProductService {
     Optional<Product> getProductById(long id);
 
     List<Product> getAllProductsByCategoryId(int id);
+
+    Product updatedProduct( Long id, Product updatedProduct);
 }

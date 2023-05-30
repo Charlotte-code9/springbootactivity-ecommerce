@@ -38,4 +38,17 @@ public class ProductServiceImplementation implements ProductService{
     public List<Product> getAllProductsByCategoryId(int id) {
         return productRepository.findAllByCategory_Id(id);
     }
+
+    @Override
+    public Product updatedProduct( Long id, Product updatedProduct){
+        Product product = productRepository.findById(id).orElseThrow();
+        product.setName(updatedProduct.getName());
+        product.setCategory(updatedProduct.getCategory());
+        product.setPrice(updatedProduct.getPrice());
+        product.setQuantity(updatedProduct.getQuantity());
+        product.setDescription(updatedProduct.getDescription());
+        product.setImage_name(updatedProduct.getImage_name());
+        return productRepository.save(product);
+
+    }
 }

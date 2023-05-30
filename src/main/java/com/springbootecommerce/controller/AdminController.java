@@ -38,6 +38,7 @@ public class AdminController {
     }
     @GetMapping("/admin")
     public String adminHome(){
+
         return "/html/adminHome";
     }
     @GetMapping("/admin/categories")
@@ -99,10 +100,15 @@ public class AdminController {
         Product product = productService.getProductById(id).get();
         ProductDTO productDTO = adminService.setProductFields(product);
 
+
         model.addAttribute("categories", categoryService.getAllCategory());
         model.addAttribute("productDTO", productDTO);
+        model.addAttribute("productId", id);
 
         return "html/productsAdd";
     }
+
+
+
 
 }
