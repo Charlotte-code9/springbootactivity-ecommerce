@@ -103,10 +103,11 @@ public class AdminController {
 
         model.addAttribute("categories", categoryService.getAllCategory());
         model.addAttribute("productDTO", productDTO);
-        model.addAttribute("productId", id);
 
         return "html/productsAdd";
     }
+
+
 
 
 

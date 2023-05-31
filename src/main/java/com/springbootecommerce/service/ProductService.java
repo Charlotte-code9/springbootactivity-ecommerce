@@ -16,5 +16,4 @@ public interface ProductService {
 
     List<Product> getAllProductsByCategoryId(int id);
 
-    Product updatedProduct( Long id, Product updatedProduct);
 }
