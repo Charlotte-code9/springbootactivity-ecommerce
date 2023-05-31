@@ -154,10 +154,10 @@
           </div>
           <div class="col-sm-7 d-flex justify-content-center">
             <div class="card-body">
-              <h5 class="card-title" th:text="${product.name}"></h5>
+              <h3 class="card-title" th:text="${product.name}"></h3>
               <h4>₱ <span th:text="${product.price}"></span></h4>
-              <p th:text="${product.description}" >Product description</p>
-              <a href="#" th:href="@{/shop/viewproduct/{id}(id=${product.id})}" class="btn btn-primary">View Product</a>
+              <p th:text="${product.description}" style="font-size: 15px;">Product description</p>
+              <a href="#" th:href="@{/shop/viewproduct/{id}(id=${product.id})}" class="btn btn-primary" style="font-size: 15px;">View Product</a>
             </div>
           </div>
         </div>

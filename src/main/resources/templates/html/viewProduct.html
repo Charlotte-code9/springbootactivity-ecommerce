@@ -149,11 +149,11 @@
       <h2 th:text="${product.name}"></h2>
       <p th:text="${product.category.name}"></p>
       <h2>₱ <span th:text="${product.price}"></span></h2>
-      <h5>Quantity:
+      <h4>Quantity:
         <span th:text="${product.quantity}"></span>
-      </h5>
-      <p th:text="${product.description}"></p>
-      <a href="" th:href="@{/addToCart/{id}(id = ${product.id})}" class="btn btn-primary">Add to cart</a>
+      </h4>
+      <p th:text="${product.description}" style="font-size: 15px;"></p>
+      <a href="" th:href="@{/addToCart/{id}(id = ${product.id})}" class="btn btn-primary" style="font-size: 15px;">Add to cart</a>
     </div>
   </div>
 </div>
